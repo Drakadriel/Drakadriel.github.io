@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,20 +24,43 @@ class MyApp extends StatelessWidget {
                     radius: 60,
                     backgroundImage: AssetImage('images/portrait.PNG'),
                   ),
-                  Text(
-                    'Laura Trivino',
-                    style: TextStyle(
-                      fontSize: 30,
+                  TyperAnimatedTextKit(
+                    text: ['Laura Trivino'],
+                    isRepeatingAnimation: false,
+                    textStyle: TextStyle(
+                      fontSize: 50,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
                     'SOFTWARE ENGINEER',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 30,
                       letterSpacing: 2.5,
                       fontWeight: FontWeight.bold,
                     ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      SizedBox(width: 20.0, height: 100.0),
+                      Text(
+                        "I'm",
+                        style: TextStyle(fontSize: 35.0),
+                      ),
+                      SizedBox(width: 20.0, height: 100.0),
+                      RotateAnimatedTextKit(
+                          onTap: () {
+                            print("Tap Event");
+                          },
+                          text: ["AWESOME", "OPTIMISTIC", "FAN OF PIZZA"],
+                          textStyle:
+                              TextStyle(fontSize: 40.0, fontFamily: "Horizon"),
+                          textAlign: TextAlign.start,
+                          alignment: AlignmentDirectional
+                              .topStart // or Alignment.topLeft
+                          ),
+                    ],
                   ),
                   SizedBox(
                     width: 200,
