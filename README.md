@@ -1,6 +1,6 @@
-# flutterpersonnalpage
+# My Flutter Personnal Page aka FPP 
 
-My personnal page made with Flutter 
+My personnal page made with Flutter, that I'm still learning.
 
 ## Getting Started
 
